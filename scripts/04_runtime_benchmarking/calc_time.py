@@ -10,21 +10,21 @@ def run_bac2feature(test_seq_path, method) -> None:
     cmd = []
     if method == 'homology':
         # Homology based prediction
-        cmd = ['bac_to_feature.py',
+        cmd = ['bac2feature',
                '-s', test_seq_path,
                '-o', '../../data/time_calculation/b2f_output_homology.tsv',
                '-m', 'homology',
                '--threads', '1']
     elif method == 'phylogeny':
         # Phylogeny based prediction
-        cmd = ['bac_to_feature.py',
+        cmd = ['bac2feature',
                '-s', test_seq_path,
                '-o', '../../data/time_calculation/b2f_output_phylogeny.tsv',
                '-m', 'phylogeny',
                '--threads', '1']
     elif method == 'taxonomy':
         # Taxonomy based prediction
-        cmd = ['bac_to_feature.py',
+        cmd = ['bac2feature',
                '-s', test_seq_path,
                '-o', '../../data/time_calculation/b2f_output_taxonomy.tsv',
                '-m', 'taxonomy',
